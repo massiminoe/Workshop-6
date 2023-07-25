@@ -1,18 +1,24 @@
 **The University of Melbourne**
 # COMP30019 – Graphics and Interaction
 
-## Workshop 11
+## Workshop 6: Gameplay Elements (Part 3)
+
+<p align="center">
+  <img src="Gifs/game.gif">
+</p>
+
+<p align="center">
+  <a href="https://comp30019.github.io/Workshop-6-Solution/" alt="Play Online">
+    <img src="https://img.shields.io/static/v1?label=Play%20Solution&message=comp30019.github.io/Workshop-6-Solution/&color=blue&logo=unity" />
+  </a>
+</p>
 
 
-# Introduction:
+### Introduction
 
 In this workshop you will be continuing work on the _Cube Invaders_ game from last time.
 You'll add some text to keep track of the player's score, as well as
 create a separate title/main menu scene to serve as an "entry point" for the game.
-
-<p align="center">
-  <img src="Gifs/game.gif" width="100%">
-</p>
 
 > **Note**<br>
 > This repository contains the solution from last week, which is also built upon the
@@ -21,7 +27,7 @@ create a separate title/main menu scene to serve as an "entry point" for the gam
 > you understand how everything up until this point works, so it's wise
 > to study the solution if you haven't already.
 
-### Tasks:
+### Tasks
 
 #### 1. Add some score text
 
