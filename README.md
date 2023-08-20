@@ -14,7 +14,7 @@
 </p>
 
 
-### Introduction
+### Overview
 
 In this workshop you will be continuing work on the _Cube Invaders_ game from last time.
 You'll add some text to keep track of the player's score, as well as
@@ -148,12 +148,12 @@ could also be added to the same manager component.
   <img src="Gifs/task_5.gif" width="100%">
 </p>
 
-#### 6. Multiple waves (extension)
+#### 6. Multiple waves
 
-To add in some difficulty progression, extend the game such that there is more than one wave of
-enemy cubes. When a wave is destroyed, the next one should be spawned after a short delay.
-Like in the previous task, display some transient status text that informs the player of an incoming
-wave of enemies, and/or give them kudos for clearing a wave. 
+Extend the game such that there is more than one wave of enemy cubes. When a
+wave is destroyed, the next one should be spawned after a short delay. Like in
+the previous task, display some transient status text that informs the player
+of an incoming wave of enemies, and/or give them kudos for clearing a wave. 
 
 One approach would be to create copies of the **SwarmManager** object, which
 are initially inactive. Create another object/component called **WaveManager** which 
@@ -165,3 +165,54 @@ that each swarm is harder in some way -- feel free to be creative with this!
 <p align="center">
   <img src="Gifs/task_6.gif" width="100%">
 </p>
+
+#### 7. Sound effects
+
+Audio is a key component of any game, and can really help to bring it to life. Inside the `Assets/Resources/Sounds` folder, you'll find a number of sound effects:
+- **CubeExplosion.wav**
+- **ProjectileFire.wav**
+- **ProjectileImpact.wav**
+- **WaveBegin.wav**
+- **WaveDefeated.wav**
+- **GameOver.wav**
+- **MenuSound.wav**
+
+Your task is to add these sound effects to the game. The easiest way to do this
+is to use the built-in
+[`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html)
+component, which allows you to play sound effects from a game object.
+
+We've also given you a `PlaySoundOnStart.cs` script that can be attached to any
+game object in order to play a sound effect upon creation. This component
+allows for some optional pitch randomisation, which can help reduce the
+repetitiveness of sound effects that are played frequently. Note that the
+`soundPath` field in the inspector takes a `string` which is the path to the
+sound effect relative to the `Resources` folder. For example, if you wanted to
+play the `CubeExplosion.wav` sound effect, you would set this field to
+`Sounds/CubeExplosion`. Give this a shot now by attaching the
+`PlaySoundOnStart.cs` script to the **CubeExplosion** prefab!
+
+> **Warning**<br>
+> The `PlaySoundOnStart.cs` script dynamically loads the sound effect from the
+> `Resources/Sounds` folder [at
+> runtime](https://docs.unity3d.com/Manual/LoadingResourcesatRuntime.html). Be
+> aware that the `Resources` folder is a special folder in Unity, and any
+> assets placed in it (or in subdirectories of it) will be included in the
+> build regardless of whether they are used or not. This is a useful feature,
+> but it can also bloat your build size if you're not careful!
+
+
+#### 8. Build your game!
+
+Have a go at building the project from this workshop locally. You can do this
+by going to **File -> Build Settings** and selecting **WebGL** as the platform.
+Then, click **Build and Run** and select a folder to save the build in. Unity
+will then build your game and open it in your default browser.
+
+
+### References
+
+Many thanks to the following sources for the assets used in this workshop:
+
+- [Google Fonts](https://fonts.google.com/)
+- [Soniss](https://sonniss.com/gameaudiogdc/) (GameAudioGDC 2020 Pack)
