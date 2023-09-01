@@ -32,6 +32,11 @@ public class ProjectileController : MonoBehaviour
                 col.gameObject.GetComponentInParent<HealthManager>();
             if (healthManager)
                 healthManager.ApplyDamage(this.damageAmount);
+
+            // Increase score for hitting enemy
+            if (col.gameObject.tag == "Enemy") {
+                GameManager.Instance.UpdateScore(10);
+            }
         }
 
         // Create collision particles in opposite direction to movement.
